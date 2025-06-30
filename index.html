@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Logistic Search</title>
+    <link rel="icon" href="icon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+        function switchLang(lang) {
+            // скрываем все описания
+            document.querySelectorAll('.desc').forEach(el => el.style.display = 'none');
+            document.getElementById('desc-' + lang).style.display = 'block';
+
+            // скрываем все полные описания
+            document.querySelectorAll('.full-description').forEach(el => el.style.display = 'none');
+            document.getElementById('full-' + lang).style.display = 'block';
+
+            // переключаем ссылку на политику конфиденциальности
+            document.getElementById('privacy-ru').style.display = 'none';
+            document.getElementById('privacy-en').style.display = 'none';
+            document.getElementById('privacy-tr').style.display = 'none';
+            document.getElementById('privacy-' + lang).style.display = 'inline';
+        }
+        window.onload = () => switchLang('ru'); // по умолчанию русский
+    </script>
+</head>
+
+<body>
+    <img src="icon.png" alt="App Icon" class="icon" />
+    <h1>Logistic Search</h1>
+    <div class="lang">
+        <button onclick="switchLang('ru')">🇷🇺 Рус</button>
+        <button onclick="switchLang('en')">🇬🇧 Eng</button>
+        <button onclick="switchLang('tr')">🇹🇷 Türk</button>
+    </div>
+
+    <div class="download-wrapper">
+        <a class="apk-button" href="logistic_search.apk" download>📥 Download APK</a>
+    </div>
+
+    <div id="desc-ru" class="desc" style="display: none;">
+        Приложение для управления логистикой: отслеживание водителей, управление заказами в реальном времени.
+    </div>
+    <div id="desc-en" class="desc" style="display: none;">
+        Logistics management app: driver tracking and real-time order management.
+    </div>
+    <div id="desc-tr" class="desc" style="display: none;">
+        Lojistik yönetim uygulaması: sürücü takibi ve gerçek zamanlı sipariş yönetimi.
+    </div>
+
+    <!-- Полные описания -->
+    <section id="full-ru" class="full-description" style="display:none;">
+        <h2>Полное описание</h2>
+        <p>Данное приложение — комплексное решение для управления логистикой и курьерской доставкой с продуманной
+            системой авторизации и ролей, которая позволяет организовать эффективную работу всех участников процесса.
+            Оно разработано с акцентом на удобство, безопасность и оперативность взаимодействия между менеджерами,
+            водителями и администраторами.</p>
+        <h3>🔐 Авторизация и роли</h3>
+        <p>В приложении реализована система с тремя основными ролями:</p>
+        <ul>
+            <li><strong>Администратор</strong> — управляет системой и контролирует работу пользователей. Доступ
+                администратора возможен только при активной подписке, срок которой проверяется автоматически. При
+                окончании подписки пользователю показывается уведомление с предложением продлить сервис.</li>
+            <li><strong>Менеджер</strong> — создаёт и контролирует заказы в режиме реального времени. Менеджеры
+                формируют новые заявки, задают параметры и приоритеты, следят за статусом выполнения. Менеджеры видят
+                только данные, соответствующие их уровню доступа, что обеспечивает безопасность.</li>
+            <li><strong>Водитель</strong> — принимает заказы, назначенные менеджерами, и выполняет их. Интерфейс
+                водителя позволяет быстро просматривать новые задания, принимать их и отслеживать историю выполненных
+                заказов.</li>
+        </ul>
+        <p>Такое разделение ролей способствует слаженной работе и снижает риски ошибок.</p>
+        <h3>🛰️ Фоновое обновление геолокации</h3>
+        <p>Ключевая особенность — автоматическое фоновое обновление геолокации водителей в режиме реального времени,
+            пока заказ находится в статусе <em>in_transit</em> (в пути). Это позволяет:</p>
+        <ul>
+            <li>Менеджерам и администраторам видеть точное местоположение водителей на карте и оперативно контролировать
+                выполнение заказов.</li>
+            <li>Повысить безопасность и прозрачность работы благодаря фиксации перемещений.</li>
+            <li>Улучшить качество сервиса, предоставляя клиентам актуальные данные о статусе доставки.</li>
+            <li>Обновление работает эффективно и не нагружает устройство.</li>
+        </ul>
+        <h3>📊 Статистика заказов и пользователей</h3>
+        <p>В приложении встроен модуль аналитики с графиками, который показывает:</p>
+        <ul>
+            <li>Динамику и количество заказов за разные периоды.</li>
+            <li>Активность пользователей по ролям.</li>
+            <li>Возможность фильтрации и детализации по различным параметрам.</li>
+            <li>Графики и диаграммы делают данные наглядными и помогают принимать решения, оптимизируя работу команды.
+            </li>
+        </ul>
+        <h3>🧾 Подписка для администраторов</h3>
+        <p>Админ-доступ регулируется подпиской, обеспечивающей:</p>
+        <ul>
+            <li>Автоматическую проверку срока подписки при входе.</li>
+            <li>Уведомления при её окончании с предложением продлить.</li>
+            <li>Ограничение доступа к админ-функциям при отсутствии активной подписки.</li>
+        </ul>
+        <p>Это защищает сервис от несанкционированного использования и поддерживает его экономическую модель.</p>
+        <h3>Дополнительные преимущества</h3>
+        <ul>
+            <li>Работа в режиме реального времени без задержек.</li>
+            <li>Защита данных и чёткое разграничение прав доступа.</li>
+            <li>Удобный и понятный интерфейс для всех ролей.</li>
+            <li>Масштабируемость и возможность расширения функционала.</li>
+            <li>Кроссплатформенная поддержка Android и iOS.</li>
+        </ul>
+        <h3>Итог</h3>
+        <p>Это современное и надёжное приложение для управления доставкой, обеспечивающее прозрачность, контроль и
+            оперативность. Чёткое разделение ролей, геолокация в реальном времени, статистика и подписка делают его
+            мощным инструментом для повышения эффективности работы команд менеджеров и водителей.</p>
+    </section>
+
+    <section id="full-en" class="full-description" style="display:none;">
+        <h2>Full Description</h2>
+        <p>This application is a comprehensive solution for logistics and courier delivery management with a
+            well-designed authorization and role system, enabling efficient collaboration among all participants in the
+            process. It is developed with a focus on convenience, security, and prompt interaction between managers,
+            drivers, and administrators.</p>
+        <h3>🔐 Authorization and Roles</h3>
+        <p>The app implements a system with three main roles:</p>
+        <ul>
+            <li><strong>Administrator</strong> — manages the system and oversees user operations. Administrator access
+                is available only with an active subscription, which is checked automatically. When the subscription
+                expires, the user receives a notification with an offer to renew the service.</li>
+            <li><strong>Manager</strong> — creates and controls orders in real-time. Managers create new requests, set
+                parameters and priorities, and monitor execution status. Managers see only data corresponding to their
+                access level, ensuring security.</li>
+            <li><strong>Driver</strong> — accepts orders assigned by managers and executes them. The driver's interface
+                allows quick viewing of new tasks, accepting them, and tracking the history of completed orders.</li>
+        </ul>
+        <p>Such role separation promotes smooth workflow and reduces the risk of errors.</p>
+        <h3>🛰️ Background Geolocation Updates</h3>
+        <p>A key feature is the automatic background update of drivers’ geolocation in real-time while the order status
+            is <em>in_transit</em>. This allows:</p>
+        <ul>
+            <li>Managers and administrators to see drivers’ precise locations on the map and promptly control order
+                fulfillment.</li>
+            <li>Enhanced safety and transparency through movement tracking.</li>
+            <li>Improved service quality by providing clients with up-to-date delivery status.</li>
+            <li>The update works efficiently without overloading the device.</li>
+        </ul>
+        <h3>📊 Orders and Users Statistics</h3>
+        <p>The app includes an analytics module with charts that show:</p>
+        <ul>
+            <li>Order dynamics and volumes over different periods.</li>
+            <li>User activity by roles.</li>
+            <li>Filtering and detail options by various parameters.</li>
+            <li>Charts and diagrams visualize data clearly and help make decisions to optimize team performance.</li>
+        </ul>
+        <h3>🧾 Subscription for Administrators</h3>
+        <p>Admin access is subscription-based, providing:</p>
+        <ul>
+            <li>Automatic subscription validity checks upon login.</li>
+            <li>Notifications upon expiration with renewal prompts.</li>
+            <li>Restriction of admin functions without an active subscription.</li>
+        </ul>
+        <p>This protects the service from unauthorized use and supports its economic model.</p>
+        <h3>Additional Benefits</h3>
+        <ul>
+            <li>Real-time operation without delays.</li>
+            <li>Data protection and clear access rights separation.</li>
+            <li>User-friendly and intuitive interface for all roles.</li>
+            <li>Scalability and potential for functionality expansion.</li>
+            <li>Cross-platform support for Android and iOS.</li>
+        </ul>
+        <h3>Summary</h3>
+        <p>This is a modern and reliable delivery management application ensuring transparency, control, and
+            responsiveness. Clear role separation, real-time geolocation, analytics, and subscription make it a powerful
+            tool to enhance the efficiency of managers’ and drivers’ teams.</p>
+    </section>
+
+    <section id="full-tr" class="full-description" style="display:none;">
+        <h2>Tam Açıklama</h2>
+        <p>Bu uygulama, tüm sürecin katılımcılarının etkin çalışmasını sağlayan, iyi tasarlanmış bir yetkilendirme ve
+            rol sistemi ile lojistik ve kurye teslimat yönetimi için kapsamlı bir çözümdür. Yöneticiler, sürücüler ve
+            yöneticiler arasındaki etkileşimde kolaylık, güvenlik ve hızlılık odaklı geliştirilmiştir.</p>
+        <h3>🔐 Yetkilendirme ve Roller</h3>
+        <p>Uygulamada üç temel rol sistemi uygulanmaktadır:</p>
+        <ul>
+            <li><strong>Yönetici</strong> — sistemi yönetir ve kullanıcıların çalışmalarını denetler. Yönetici erişimi
+                yalnızca aktif abonelik durumunda mümkündür ve abonelik süresi otomatik olarak kontrol edilir. Abonelik
+                sona erdiğinde kullanıcıya hizmeti yenilemesi için bildirim gösterilir.</li>
+            <li><strong>Yönetici (Manager)</strong> — siparişleri gerçek zamanlı oluşturur ve kontrol eder. Yöneticiler
+                yeni talepler oluşturur, parametreler ve öncelikler belirler, durum takibi yapar. Yöneticiler sadece
+                erişim seviyelerine uygun verileri görür, bu da güvenliği sağlar.</li>
+            <li><strong>Sürücü</strong> — yöneticiler tarafından atanan siparişleri kabul eder ve yerine getirir. Sürücü
+                arayüzü, yeni görevleri hızlıca görmeyi, kabul etmeyi ve tamamlanan siparişlerin geçmişini takip etmeyi
+                sağlar.</li>
+        </ul>
+        <p>Bu rol ayrımı uyumlu çalışma sağlar ve hata risklerini azaltır.</p>
+        <h3>🛰️ Arka Planda Konum Güncelleme</h3>
+        <p>Ana özellik, sipariş <em>in_transit</em> durumundayken sürücülerin konumlarının gerçek zamanlı ve otomatik
+            olarak arka planda güncellenmesidir. Bu sayede:</p>
+        <ul>
+            <li>Yöneticiler ve yöneticiler, sürücülerin tam konumunu harita üzerinde görebilir ve siparişlerin
+                yürütülmesini hızlıca kontrol edebilir.</li>
+            <li>Hareketlerin kaydedilmesiyle güvenlik ve şeffaflık artırılır.</li>
+            <li>Müşterilere teslimat durumu hakkında güncel bilgi verilerek hizmet kalitesi iyileştirilir.</li>
+            <li>Güncelleme cihazı yormadan etkili şekilde çalışır.</li>
+        </ul>
+        <h3>📊 Siparişler ve Kullanıcılar İstatistikleri</h3>
+        <p>Uygulamada grafiklerle desteklenen bir analiz modülü bulunur; bu modül:</p>
+        <ul>
+            <li>Farklı dönemlerdeki sipariş dinamiklerini ve miktarlarını gösterir.</li>
+            <li>Roller bazında kullanıcı aktivitesini gösterir.</li>
+            <li>Çeşitli parametrelere göre filtreleme ve detaylandırma imkânı sunar.</li>
+            <li>Grafikler ve diyagramlar verileri görsel hale getirir ve ekip performansının optimize edilmesine
+                yardımcı olur.</li>
+        </ul>
+        <h3>🧾 Yöneticiler için Abonelik</h3>
+        <p>Yönetici erişimi abonelik ile kontrol edilir:</p>
+        <ul>
+            <li>Girişte abonelik süresi otomatik olarak kontrol edilir.</li>
+            <li>Abonelik bitiminde yenileme önerisi ile bildirim yapılır.</li>
+            <li>Aktif abonelik yoksa yönetici fonksiyonlarına erişim kısıtlanır.</li>
+        </ul>
+        <p>Bu, hizmetin yetkisiz kullanımını engeller ve ekonomik modelini destekler.</p>
+        <h3>Ek Avantajlar</h3>
+        <ul>
+            <li>Gecikmesiz gerçek zamanlı çalışma.</li>
+            <li>Veri güvenliği ve erişim haklarının net ayrımı.</li>
+            <li>Tüm roller için kullanımı kolay ve anlaşılır arayüz.</li>
+            <li>Ölçeklenebilirlik ve fonksiyonellik genişletme imkânı.</li>
+            <li>Android ve iOS için çapraz platform desteği.</li>
+        </ul>
+        <h3>Sonuç</h3>
+        <p>Bu, teslimat yönetimi için modern ve güvenilir bir uygulamadır; şeffaflık, kontrol ve hızlılık sağlar. Net
+            rol ayrımı, gerçek zamanlı konum takibi, istatistik ve abonelik özellikleri ile yöneticiler ve sürücüler
+            ekiplerinin verimliliğini artırmak için güçlü bir araçtır.</p>
+    </section>
+
+    <footer>
+        <a href="privacy.html" id="privacy-ru" style="display: none;">Политика конфиденциальности</a>
+        <a href="privacy.html" id="privacy-en" style="display: none;">Privacy Policy</a>
+        <a href="privacy.html" id="privacy-tr" style="display: none;">Gizlilik Politikası</a>
+    </footer>
+</body>
+
+</html>

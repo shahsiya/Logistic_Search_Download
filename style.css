@@ -1,0 +1,201 @@
+body {
+	font-family: sans-serif;
+	background: #f9f9f9;
+	padding: 2em;
+	max-width: 900px;
+	margin: auto;
+	color: #333;
+	line-height: 1.6;
+	text-align: left;
+	/* текст слева */
+}
+
+.lang {
+	margin: 1em auto;
+	text-align: center;
+}
+
+.download-wrapper {
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.apk-button {
+	display: inline-block;
+	padding: 1em 2em;
+	font-size: 18px;
+	background: #1a73e8;
+	color: white;
+	border-radius: 24px;
+	text-decoration: none;
+	box-shadow: 0 3px 8px rgba(26, 115, 232, 0.4);
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+	font-weight: 600;
+	/* margin-bottom: 2em; убрал, теперь у обёртки */
+}
+
+.apk-button:hover,
+.apk-button:focus {
+	background-color: #155ab6;
+	box-shadow: 0 6px 16px rgba(21, 90, 182, 0.6);
+	outline: none;
+	cursor: pointer;
+}
+
+.desc {
+	max-width: 600px;
+	margin: 2em auto;
+	font-size: 20px;
+	/* чуть крупнее */
+	line-height: 1.5;
+	color: #1a73e8;
+	/* синий цвет, как в заголовках */
+	font-weight: 700;
+	/* жирный */
+	background: #fff;
+	padding: 1em 1.5em;
+	border-radius: 12px;
+	box-shadow: 0 3px 10px rgba(26, 115, 232, 0.15);
+	/* легкий синий теневой эффект */
+	text-align: center;
+	user-select: text;
+	transition: opacity 0.3s ease;
+}
+
+.icon {
+	display: block;
+	margin: 0 auto 1em auto;
+	/* сверху 0, снизу 1em, по бокам авто для центрирования */
+	width: 128px;
+	height: 128px;
+	border-radius: 32px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	object-fit: cover;
+	background-color: white;
+}
+
+.full-description {
+	text-align: left;
+	background: white;
+	padding: 1.5em 2em;
+	border-radius: 16px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	font-size: 16px;
+	line-height: 1.6;
+	color: #333;
+	max-width: 900px;
+	margin: 3em auto;
+	white-space: pre-wrap;
+	user-select: text;
+}
+
+.full-description h2 {
+	margin-top: 0;
+	font-weight: 700;
+	color: #1a73e8;
+}
+
+.full-description h3 {
+	margin-bottom: 0.3em;
+	color: #155ab6;
+}
+
+.full-description p {
+	margin-top: 0.4em;
+	margin-bottom: 1em;
+}
+
+.full-description ul {
+	margin-top: 0;
+	margin-bottom: 1em;
+	padding-left: 1.2em;
+}
+
+.full-description li {
+	margin-bottom: 0.5em;
+}
+
+footer {
+	margin-top: 3em;
+	padding: 1em 0;
+	border-top: 1px solid #ddd;
+	text-align: center;
+}
+
+footer a {
+	color: #1a73e8;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+/* Для страницы privacy.html */
+h1 {
+	color: #1a73e8;
+	margin-bottom: 0.5em;
+	text-align: center;
+}
+
+section {
+	background: white;
+	padding: 2em;
+	border-radius: 16px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	margin-top: 2em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+/* Адаптив для мобильных устройств */
+@media (max-width: 600px) {
+	body {
+		padding: 1em;
+		max-width: 100%;
+	}
+
+	.desc {
+		max-width: 100%;
+		margin: 1.5em auto;
+		font-size: 18px;
+		line-height: 1.4;
+		padding: 0.8em 1em;
+	}
+
+	.full-description {
+		padding: 1em 1em;
+		max-width: 100%;
+		margin: 2em auto;
+		font-size: 14px;
+		line-height: 1.4;
+	}
+
+	.icon {
+		width: 100px;
+		height: 100px;
+		margin-bottom: 1em;
+	}
+
+	.lang button {
+		font-size: 18px;
+		padding: 0.6em 1.2em;
+		margin: 0 0.3em;
+	}
+
+	.apk-button {
+		font-size: 16px;
+		padding: 0.8em 1.5em;
+	}
+
+	footer {
+		padding: 0.5em 0;
+	}
+
+	footer a {
+		font-size: 16px;
+	}
+}
