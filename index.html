@@ -72,6 +72,19 @@
                 заказов.</li>
         </ul>
         <p>Такое разделение ролей способствует слаженной работе и снижает риски ошибок.</p>
+
+        <h3>🏢 Масштабирование и управление компаниями</h3>
+        <p>В приложении реализована основа для масштабирования с поддержкой множества компаний, каждая из которых
+            работает отдельно с собственными заказами, пользователями и настройками.</p>
+        <ul>
+            <li><strong>Создание компаний</strong> — администраторы могут создавать новые компании в системе.</li>
+            <li><strong>Изоляция данных</strong> — данные каждой компании доступны только её пользователям.</li>
+            <li><strong>Управление пользователями по компаниям</strong> — админы и менеджеры работают только с данными
+                своей компании.</li>
+            <li><strong>Поддержка многоклиентности</strong> — приложение готово к масштабированию на большое число
+                клиентов с полной изоляцией данных.</li>
+        </ul>
+
         <h3>🛰️ Фоновое обновление геолокации</h3>
         <p>Ключевая особенность — автоматическое фоновое обновление геолокации водителей в режиме реального времени,
             пока заказ находится в статусе <em>in_transit</em> (в пути). Это позволяет:</p>
@@ -106,58 +119,75 @@
             <li>Удобный и понятный интерфейс для всех ролей.</li>
             <li>Масштабируемость и возможность расширения функционала.</li>
             <li>Кроссплатформенная поддержка Android и iOS.</li>
+            <li>Гибкость — приложение подходит и для служб такси.</li>
         </ul>
         <h3>Итог</h3>
         <p>Это современное и надёжное приложение для управления доставкой, обеспечивающее прозрачность, контроль и
-            оперативность. Чёткое разделение ролей, геолокация в реальном времени, статистика и подписка делают его
-            мощным инструментом для повышения эффективности работы команд менеджеров и водителей.</p>
+            оперативность. Чёткое разделение ролей, геолокация в реальном времени, статистика, подписка и поддержка
+            мультикомпаний делают его мощным инструментом для повышения эффективности работы команд менеджеров и
+            водителей.</p>
     </section>
 
     <section id="full-en" class="full-description" style="display:none;">
         <h2>Full Description</h2>
-        <p>This application is a comprehensive solution for logistics and courier delivery management with a
-            well-designed authorization and role system, enabling efficient collaboration among all participants in the
-            process. It is developed with a focus on convenience, security, and prompt interaction between managers,
+        <p>This application is a comprehensive solution for logistics, courier delivery, and taxi service management,
+            featuring a well-designed authorization and role system that enables efficient collaboration among all
+            participants. It is developed with a focus on convenience, security, and prompt interaction between
+            managers,
             drivers, and administrators.</p>
         <h3>🔐 Authorization and Roles</h3>
         <p>The app implements a system with three main roles:</p>
         <ul>
             <li><strong>Administrator</strong> — manages the system and oversees user operations. Administrator access
-                is available only with an active subscription, which is checked automatically. When the subscription
+                is granted only with an active subscription, which is checked automatically. When the subscription
                 expires, the user receives a notification with an offer to renew the service.</li>
-            <li><strong>Manager</strong> — creates and controls orders in real-time. Managers create new requests, set
-                parameters and priorities, and monitor execution status. Managers see only data corresponding to their
-                access level, ensuring security.</li>
-            <li><strong>Driver</strong> — accepts orders assigned by managers and executes them. The driver's interface
-                allows quick viewing of new tasks, accepting them, and tracking the history of completed orders.</li>
+            <li><strong>Manager</strong> — creates and controls orders or rides in real-time. Managers create new
+                requests, set parameters and priorities, and monitor execution status. Managers see only data
+                corresponding to their access level, ensuring security.</li>
+            <li><strong>Driver</strong> — accepts orders or rides assigned by managers and executes them. The driver's
+                interface allows quick viewing of new tasks, accepting them, and tracking the history of completed
+                orders.</li>
         </ul>
         <p>Such role separation promotes smooth workflow and reduces the risk of errors.</p>
-        <h3>🛰️ Background Geolocation Updates</h3>
-        <p>A key feature is the automatic background update of drivers’ geolocation in real-time while the order status
+
+        <h3>🏢 Scaling and Company Management</h3>
+        <p>The app now supports scaling with multiple companies. Each company operates independently with its own
+            database of orders, users, and settings.</p>
+        <ul>
+            <li><strong>Company Creation</strong> — administrators can create new companies within the system.</li>
+            <li><strong>Data Isolation</strong> — all company data is accessible only to its users.</li>
+            <li><strong>User Management by Company</strong> — admins and managers manage orders and users only within
+                their company.</li>
+            <li><strong>Multi-company Support</strong> — the app is ready for expansion to numerous clients with full
+                data isolation.</li>
+        </ul>
+
+        <h3>🛰️ Background Location Updates</h3>
+        <p>A key feature is the automatic background update of drivers’ geolocation in real time while an order or ride
             is <em>in_transit</em>. This allows:</p>
         <ul>
-            <li>Managers and administrators to see drivers’ precise locations on the map and promptly control order
+            <li>Managers and admins to see drivers’ exact locations on the map and promptly control order or ride
                 fulfillment.</li>
             <li>Enhanced safety and transparency through movement tracking.</li>
-            <li>Improved service quality by providing clients with up-to-date delivery status.</li>
-            <li>The update works efficiently without overloading the device.</li>
+            <li>Improved service quality by providing clients with up-to-date delivery or ride status.</li>
+            <li>Efficient updates without device overload.</li>
         </ul>
-        <h3>📊 Orders and Users Statistics</h3>
-        <p>The app includes an analytics module with charts that show:</p>
+        <h3>📊 Orders and User Statistics</h3>
+        <p>The app includes an analytics module with charts showing:</p>
         <ul>
-            <li>Order dynamics and volumes over different periods.</li>
+            <li>Trends and volumes of orders or rides over various periods.</li>
             <li>User activity by roles.</li>
-            <li>Filtering and detail options by various parameters.</li>
-            <li>Charts and diagrams visualize data clearly and help make decisions to optimize team performance.</li>
+            <li>Filtering and detailed breakdown by different parameters.</li>
+            <li>Clear visualizations that aid decision-making and team optimization.</li>
         </ul>
         <h3>🧾 Subscription for Administrators</h3>
         <p>Admin access is subscription-based, providing:</p>
         <ul>
-            <li>Automatic subscription validity checks upon login.</li>
+            <li>Automatic subscription validity checks on login.</li>
             <li>Notifications upon expiration with renewal prompts.</li>
-            <li>Restriction of admin functions without an active subscription.</li>
+            <li>Access restrictions to admin functions without an active subscription.</li>
         </ul>
-        <p>This protects the service from unauthorized use and supports its economic model.</p>
+        <p>This protects the service from unauthorized use and supports its business model.</p>
         <h3>Additional Benefits</h3>
         <ul>
             <li>Real-time operation without delays.</li>
@@ -165,71 +195,92 @@
             <li>User-friendly and intuitive interface for all roles.</li>
             <li>Scalability and potential for functionality expansion.</li>
             <li>Cross-platform support for Android and iOS.</li>
+            <li>Flexibility — suitable for both courier and taxi services.</li>
         </ul>
         <h3>Summary</h3>
-        <p>This is a modern and reliable delivery management application ensuring transparency, control, and
-            responsiveness. Clear role separation, real-time geolocation, analytics, and subscription make it a powerful
-            tool to enhance the efficiency of managers’ and drivers’ teams.</p>
+        <p>This is a modern and reliable application for managing deliveries, courier services, or taxis, ensuring
+            transparency, control, and efficiency. Clear role separation, real-time geolocation, statistics,
+            subscription management, and company-based architecture make it a powerful tool to enhance the productivity
+            of
+            managers and drivers.</p>
     </section>
 
     <section id="full-tr" class="full-description" style="display:none;">
         <h2>Tam Açıklama</h2>
-        <p>Bu uygulama, tüm sürecin katılımcılarının etkin çalışmasını sağlayan, iyi tasarlanmış bir yetkilendirme ve
-            rol sistemi ile lojistik ve kurye teslimat yönetimi için kapsamlı bir çözümdür. Yöneticiler, sürücüler ve
-            yöneticiler arasındaki etkileşimde kolaylık, güvenlik ve hızlılık odaklı geliştirilmiştir.</p>
+        <p>Bu uygulama, lojistik, kurye teslimatı ve taksi hizmeti yönetimi için kapsamlı bir çözümdür. İyi tasarlanmış
+            bir yetkilendirme ve rol sistemi sayesinde tüm katılımcılar arasında etkin iş birliği sağlar. Yöneticiler,
+            sürücüler ve yöneticiler arasındaki etkileşimde kolaylık, güvenlik ve hız odaklı geliştirilmiştir.</p>
         <h3>🔐 Yetkilendirme ve Roller</h3>
         <p>Uygulamada üç temel rol sistemi uygulanmaktadır:</p>
         <ul>
-            <li><strong>Yönetici</strong> — sistemi yönetir ve kullanıcıların çalışmalarını denetler. Yönetici erişimi
-                yalnızca aktif abonelik durumunda mümkündür ve abonelik süresi otomatik olarak kontrol edilir. Abonelik
-                sona erdiğinde kullanıcıya hizmeti yenilemesi için bildirim gösterilir.</li>
-            <li><strong>Yönetici (Manager)</strong> — siparişleri gerçek zamanlı oluşturur ve kontrol eder. Yöneticiler
-                yeni talepler oluşturur, parametreler ve öncelikler belirler, durum takibi yapar. Yöneticiler sadece
-                erişim seviyelerine uygun verileri görür, bu da güvenliği sağlar.</li>
-            <li><strong>Sürücü</strong> — yöneticiler tarafından atanan siparişleri kabul eder ve yerine getirir. Sürücü
-                arayüzü, yeni görevleri hızlıca görmeyi, kabul etmeyi ve tamamlanan siparişlerin geçmişini takip etmeyi
-                sağlar.</li>
+            <li><strong>Yönetici</strong> — sistemi yönetir ve kullanıcı faaliyetlerini denetler. Yönetici erişimi
+                yalnızca
+                aktif abonelikle mümkündür ve abonelik durumu otomatik olarak kontrol edilir. Abonelik sona erdiğinde,
+                kullanıcıya yenileme bildirimi gönderilir.</li>
+            <li><strong>Yönetici (Manager)</strong> — siparişleri veya sürüşleri gerçek zamanlı oluşturur ve kontrol
+                eder.
+                Yöneticiler yeni talepler oluşturur, parametreler ve öncelikler belirler, durumu izler. Yöneticiler
+                yalnızca erişim seviyelerine uygun verileri görür, bu da güvenliği sağlar.</li>
+            <li><strong>Sürücü</strong> — yöneticiler tarafından atanan siparişleri veya sürüşleri kabul eder ve yerine
+                getirir. Sürücü arayüzü, yeni görevleri hızlıca görmeyi, kabul etmeyi ve tamamlanan görevlerin geçmişini
+                takip etmeyi sağlar.</li>
         </ul>
         <p>Bu rol ayrımı uyumlu çalışma sağlar ve hata risklerini azaltır.</p>
-        <h3>🛰️ Arka Planda Konum Güncelleme</h3>
-        <p>Ana özellik, sipariş <em>in_transit</em> durumundayken sürücülerin konumlarının gerçek zamanlı ve otomatik
-            olarak arka planda güncellenmesidir. Bu sayede:</p>
+
+        <h3>🏢 Ölçeklendirme ve Şirket Yönetimi</h3>
+        <p>Uygulama artık birden fazla şirketi destekleyerek ölçeklenebilir. Her şirket, siparişler, kullanıcılar ve
+            ayarların kendi veritabanıyla bağımsız olarak çalışır.</p>
         <ul>
-            <li>Yöneticiler ve yöneticiler, sürücülerin tam konumunu harita üzerinde görebilir ve siparişlerin
-                yürütülmesini hızlıca kontrol edebilir.</li>
-            <li>Hareketlerin kaydedilmesiyle güvenlik ve şeffaflık artırılır.</li>
-            <li>Müşterilere teslimat durumu hakkında güncel bilgi verilerek hizmet kalitesi iyileştirilir.</li>
-            <li>Güncelleme cihazı yormadan etkili şekilde çalışır.</li>
+            <li><strong>Şirket Oluşturma</strong> — yöneticiler sistem içinde yeni şirketler oluşturabilir.</li>
+            <li><strong>Veri İzolasyonu</strong> — tüm şirket verileri yalnızca ilgili kullanıcılar tarafından
+                erişilebilir.</li>
+            <li><strong>Kullanıcı Yönetimi</strong> — yöneticiler ve yöneticiler yalnızca kendi şirketlerindeki
+                siparişleri
+                ve kullanıcıları yönetir.</li>
+            <li><strong>Çoklu Şirket Desteği</strong> — uygulama, veri izolasyonu ile çok sayıda müşteriye ölçeklenmeye
+                hazırdır.</li>
         </ul>
-        <h3>📊 Siparişler ve Kullanıcılar İstatistikleri</h3>
-        <p>Uygulamada grafiklerle desteklenen bir analiz modülü bulunur; bu modül:</p>
+
+        <h3>🛰️ Arka Planda Konum Güncelleme</h3>
+        <p>Ana özellik, bir sipariş veya sürüş <em>in_transit</em> durumundayken sürücülerin konumlarının gerçek zamanlı
+            ve otomatik olarak arka planda güncellenmesidir. Bu sayede:</p>
         <ul>
-            <li>Farklı dönemlerdeki sipariş dinamiklerini ve miktarlarını gösterir.</li>
-            <li>Roller bazında kullanıcı aktivitesini gösterir.</li>
-            <li>Çeşitli parametrelere göre filtreleme ve detaylandırma imkânı sunar.</li>
-            <li>Grafikler ve diyagramlar verileri görsel hale getirir ve ekip performansının optimize edilmesine
-                yardımcı olur.</li>
+            <li>Yöneticiler ve yöneticiler, sürücülerin tam konumlarını haritada görebilir ve sipariş veya sürüş
+                yürütmesini hızlıca kontrol edebilir.</li>
+            <li>Hareket takibi sayesinde güvenlik ve şeffaflık artar.</li>
+            <li>Müşterilere güncel teslimat veya sürüş durumu bilgisi sunularak hizmet kalitesi artırılır.</li>
+            <li>Güncellemeler verimli çalışır ve cihazı yormaz.</li>
+        </ul>
+        <h3>📊 Siparişler ve Kullanıcı İstatistikleri</h3>
+        <p>Uygulama, grafiklerle desteklenen bir analiz modülüne sahiptir ve şunları gösterir:</p>
+        <ul>
+            <li>Farklı dönemlerdeki sipariş veya sürüş hacmi ve eğilimleri.</li>
+            <li>Roller bazında kullanıcı aktiviteleri.</li>
+            <li>Farklı parametrelere göre filtreleme ve detaylandırma.</li>
+            <li>Karar vermeye ve ekip optimizasyonuna yardımcı olan net görselleştirmeler.</li>
         </ul>
         <h3>🧾 Yöneticiler için Abonelik</h3>
-        <p>Yönetici erişimi abonelik ile kontrol edilir:</p>
+        <p>Yönetici erişimi abonelik sistemi ile sağlanır ve şunları içerir:</p>
         <ul>
-            <li>Girişte abonelik süresi otomatik olarak kontrol edilir.</li>
-            <li>Abonelik bitiminde yenileme önerisi ile bildirim yapılır.</li>
-            <li>Aktif abonelik yoksa yönetici fonksiyonlarına erişim kısıtlanır.</li>
+            <li>Girişte abonelik geçerliliğinin otomatik kontrolü.</li>
+            <li>Bitişte yenileme bildirimi.</li>
+            <li>Aktif abonelik yoksa yönetici fonksiyonlarına erişim kısıtlaması.</li>
         </ul>
-        <p>Bu, hizmetin yetkisiz kullanımını engeller ve ekonomik modelini destekler.</p>
+        <p>Bu, hizmetin yetkisiz kullanımını önler ve iş modelini destekler.</p>
         <h3>Ek Avantajlar</h3>
         <ul>
             <li>Gecikmesiz gerçek zamanlı çalışma.</li>
-            <li>Veri güvenliği ve erişim haklarının net ayrımı.</li>
-            <li>Tüm roller için kullanımı kolay ve anlaşılır arayüz.</li>
-            <li>Ölçeklenebilirlik ve fonksiyonellik genişletme imkânı.</li>
+            <li>Veri koruma ve net erişim hakları ayrımı.</li>
+            <li>Tüm roller için kullanıcı dostu arayüz.</li>
+            <li>Ölçeklenebilirlik ve işlevsellik genişletme potansiyeli.</li>
             <li>Android ve iOS için çapraz platform desteği.</li>
+            <li>Esneklik — hem kurye hem de taksi hizmetleri için uygundur.</li>
         </ul>
         <h3>Sonuç</h3>
-        <p>Bu, teslimat yönetimi için modern ve güvenilir bir uygulamadır; şeffaflık, kontrol ve hızlılık sağlar. Net
-            rol ayrımı, gerçek zamanlı konum takibi, istatistik ve abonelik özellikleri ile yöneticiler ve sürücüler
-            ekiplerinin verimliliğini artırmak için güçlü bir araçtır.</p>
+        <p>Bu, teslimat, kurye ve taksi yönetimi için modern ve güvenilir bir uygulamadır. Şeffaflık, kontrol ve
+            verimlilik
+            sağlar. Net rol ayrımı, gerçek zamanlı konum takibi, istatistikler, abonelik ve çoklu şirket mimarisi ile
+            yöneticiler ve sürücüler için güçlü bir araçtır.</p>
     </section>
 
     <footer>
