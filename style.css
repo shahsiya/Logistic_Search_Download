@@ -16,9 +16,13 @@ body {
 }
 
 .download-wrapper {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
 	margin-top: 1em;
 	margin-bottom: 2em;
+	flex-wrap: wrap;
 }
 
 .apk-button {
